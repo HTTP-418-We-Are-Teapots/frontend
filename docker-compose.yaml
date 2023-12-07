@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  ndi-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ndi-frontend-image
+    ports:
+      - "3000:80"
+    networks:
+      - bw-services
+
+networks:
+  bw-services:
+    external: true
