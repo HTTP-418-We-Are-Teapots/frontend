@@ -1,4 +1,4 @@
-import "./landing.scss"
+import "../../assets/style/landing.scss"
 
 const Header = () => {
     return (
