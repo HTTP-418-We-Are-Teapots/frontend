@@ -1,0 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200&family=Ubuntu:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Martel', serif;
+    font-family: 'Ubuntu', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+    url(https://whc.unesco.org/uploads/activities/documents/activity-548-2.jpg);
+
+}
+
+h1{
+    color: red;
+    font-size: 8vh;
+    text-align: center;
+    margin: 2vh;
+}
+
+
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2vh;
+    background: none;
+    background-color: rgba(2, 80, 22, 0.75); ;
+    border-radius: 4vh;
+    margin: 7vh;
+    padding: 6vh;
+}
+
+.content-2{
+    background: none;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 2vh;
+    background-color: rgba(2, 80, 22, 0.75); ;
+    border-radius: 4vh;
+    margin: 7vh;
+    padding: 6vh;
+}
+
+p{
+    background: none;
+    font-size: 1.5rem;
+    text-align: justify;
+    margin: 2.2vh;
+}
+
+img{
+    width: 45vh;
+    margin-right: 2vh;
+    border-radius: 4vh;
+}
+
+@media screen and (max-width: 768px){
+    .content{
+        flex-direction: column;
+        margin: 4vh 1vh 1vh 1vh;
+    }
+
+    .content-2{
+        flex-direction: column;
+        margin: 4vh 1vh 1vh 1vh;
+        padding: 0.8vh;
+    }
+
+    p{
+        font-size: 2vh;
+        text-align: justify;
+        margin: 1vh;
+    }
+    img{
+        width: 40%;
+        margin: 1vh;
+    }
+}
