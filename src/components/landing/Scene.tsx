@@ -6,7 +6,7 @@ const Scene = () => {
             <Canvas>
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
-                <mesh
+                <mesh>
                     <boxGeometry />
                 </mesh>
             </Canvas>
