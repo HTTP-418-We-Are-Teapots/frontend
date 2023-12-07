@@ -1,92 +1,43 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200&family=Ubuntu:wght@300;400&display=swap');
-
-.preventBody{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Martel', serif;
-    font-family: 'Ubuntu', sans-serif;
-    background-repeat: no-repeat;
+.container {
+    background-image: url(../assets/fondHiver.jpg);
     background-size: cover;
-    background-image: 
-    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
-    url(https://whc.unesco.org/uploads/activities/documents/activity-548-2.jpg);
-
-}
-
-.preventDisplay{
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 0;
-}
+    gap: 20vh;
 
-.preventTitle{
-    color: red;
-    font-size: 8vh;
-    text-align: center;
-    margin: 2vh;
-}
-
-
-.content{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 2vh;
-    background: none;
-    background-color: rgba(2, 80, 22, 0.75); ;
-    border-radius: 4vh;
-    margin: 7vh;
-    padding: 6vh;
-}
-
-.content2{
-    background: none;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin: 2vh;
-    background-color: rgba(2, 80, 22, 0.75); ;
-    border-radius: 4vh;
-    margin: 7vh;
-    padding: 6vh;
-}
-
-.textContent{
-    background: none;
-    font-size: 1.5rem;
-    text-align: justify;
-    margin: 2.2vh;
-}
-
-.imgContent{
-    width: 45vh;
-    margin-right: 2vh;
-    border-radius: 4vh;
-}
-
-@media screen and (max-width: 768px){
-    .content{
-        flex-direction: column;
-        margin: 4vh 1vh 1vh 1vh;
+    h1 {
+        padding: 0;
+        margin: 0;
     }
 
-    .content2{
-        flex-direction: column;
-        margin: 4vh 1vh 1vh 1vh;
-        padding: 0.8vh;
-    }
+    & > div {
+        display: flex;
+        gap: 1vw;
 
-    textContent{
-        font-size: 2vh;
-        text-align: justify;
-        margin: 1vh;
+        & > div {
+            h2 {
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
     }
-    .imgContent{
-        width: 25vh;
-        margin: 1vh;
+    button,
+    input[type="submit"],
+    input[type="reset"] {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
     }
 }

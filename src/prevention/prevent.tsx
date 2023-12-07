@@ -1,36 +1,32 @@
-
-import  styles from './prevent.module.scss';
+import styles from './prevent.module.scss';
+import logo from "../assets/react.svg"
+interface Section {
+    title: string;
+    description: string;
+    image : string;
+}
 
 interface PreventProps {
-    title: string
-    contents: string[]
-    imgs: string[]
+    sections: Section[];
 }
 
+import nextButton from "../assets/play.png"
 
-const Prevent = (
-    {
-        title,
-        contents,
-        imgs
-    }: PreventProps
-    ) => {
-return (
-<body className={styles.preventBody}>
-    <header>
-    </header>
-    <div className={styles.preventDisplay}>
-
-    <h1 className={styles.preventTitle}>{title}</h1>
-    {contents.map((content, index) => (
-        <div key={index} className={styles.preventContent}>
-            <p>{content}</p>
-            <img className={styles.preventImg} src={imgs[index]} alt="image" />
+const Prevent = ({ sections }: PreventProps) => {
+    return (
+        <div className = {styles.container}>
+            <h1>Message de prévention</h1>
+            {sections.map((section, index) => (
+                <div key={index}>
+                   <div>
+                    <h2>{section.title}</h2>
+                    <p>{section.description}</p>
+                    </div>
+                </div>
+            ))}
+            <button><img src={nextButton} /></button>
         </div>
-        ))}
-    </div>
-</body>
-)
+    );
 }
 
-export default Prevent
+export default Prevent;
