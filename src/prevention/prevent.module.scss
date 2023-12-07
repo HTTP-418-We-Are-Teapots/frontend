@@ -1,0 +1,43 @@
+.container {
+    background-image: url(../assets/fondHiver.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20vh;
+
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+
+    & > div {
+        display: flex;
+        gap: 1vw;
+
+        & > div {
+            h2 {
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+    button,
+    input[type="submit"],
+    input[type="reset"] {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+}
