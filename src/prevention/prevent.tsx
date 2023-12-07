@@ -1,5 +1,4 @@
 import styles from './prevent.module.scss';
-import logo from "../assets/react.svg"
 interface Section {
     title: string;
     description: string;

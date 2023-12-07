@@ -1,5 +1,4 @@
 import './App.css'
-import Body from './pages/Home.tsx';
 import Header from "./components/landing/Header.tsx";
 
 import './App.css'
