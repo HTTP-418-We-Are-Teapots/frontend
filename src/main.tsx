@@ -6,15 +6,21 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+import Header from './components/landing/Header.tsx';
+import Home from './pages/Home.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
   },
   {
-    path: "/about",
-    element: <div>About</div>,
+    path: "/statistics",
+    element: <div>Statistics</div>,
+  },
+  {
+    path: "/games",
+    element: <div>Games</div>,
   },
   {
     path: "*",
@@ -24,6 +30,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <Header />
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
