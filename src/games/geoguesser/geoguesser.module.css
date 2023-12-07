@@ -1,0 +1,43 @@
+.geoguesserContainer {
+    position: relative;
+    height: 100vh;
+}
+
+.mapContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    transition: transform 0.5s ease-in;
+    transform-origin: bottom right; 
+}
+.mapContainer:hover {
+    transform: scale(2);
+}
+
+.map {
+    height: 25vh;
+    aspect-ratio: 1/1; 
+}
+
+.img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.button {
+    z-index: 500;
+    position: absolute;
+    bottom: 10%;
+    left: 33%;
+    border-radius: 10%;
+    background: rgb(255,0,0);
+    background: linear-gradient(61deg, rgba(255,0,0,1) 0%, rgba(138,23,23,1) 100%);
+    transition: all 0.5s ease-in;
+    transform-origin: bottom right;
+}
+.mapContainer:hover .button {
+    transform: scale(0.6);
+    left: 27%;
+}
