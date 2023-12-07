@@ -1,17 +1,15 @@
 import './App.css'
-import Footer from "./components/landing/Footer.tsx";
+import Body from './components/landing/Body.tsx';
 import Header from "./components/landing/Header.tsx";
-import Scene from "./components/landing/Scene.tsx";
 
 function App() {
 
   return (
-    <>
+    <div className='container'>
         <Header />
 
-        <Scene />
-        <Footer />
-    </>
+        <Body />
+    </div>
 
   )
 }
