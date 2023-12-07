@@ -1,0 +1,22 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: alex-ac/github-action-ssh-docker-compose@master
+      name: Docker-Compose Remote Deployment
+      with:
+        ssh_host: ${{ secrets.WE_ARE_TEAPOTS_FR_SSH_HOST }}
+        ssh_port: ${{ secrets.WE_ARE_TEAPOTS_FR_SSH_PORT }}
+        ssh_private_key: ${{ secrets.WE_ARE_TEAPOTS_FR_SSH_PRIVATE_KEY }}
+        ssh_user: ${{ secrets.WE_ARE_TEAPOTS_FR_SSH_USER }}
+        docker_compose_prefix: weareteapots
