@@ -8,3 +8,9 @@ services:
     image: ndi-frontend-image
     ports:
       - "3000:80"
+    networks:
+      - bw-services
+
+networks:
+  bw-services:
+    external: true
