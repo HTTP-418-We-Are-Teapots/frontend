@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Martel:wght@200&family=Ubuntu:wght@300;400&display=swap');
 
-*{
+.preventBody{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +15,15 @@
 
 }
 
-h1{
+.preventDisplay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.preventTitle{
     color: red;
     font-size: 8vh;
     text-align: center;
@@ -35,7 +43,7 @@ h1{
     padding: 6vh;
 }
 
-.content-2{
+.content2{
     background: none;
     display: flex;
     flex-direction: row-reverse;
@@ -47,14 +55,14 @@ h1{
     padding: 6vh;
 }
 
-p{
+.textContent{
     background: none;
     font-size: 1.5rem;
     text-align: justify;
     margin: 2.2vh;
 }
 
-img{
+.imgContent{
     width: 45vh;
     margin-right: 2vh;
     border-radius: 4vh;
@@ -66,19 +74,19 @@ img{
         margin: 4vh 1vh 1vh 1vh;
     }
 
-    .content-2{
+    .content2{
         flex-direction: column;
         margin: 4vh 1vh 1vh 1vh;
         padding: 0.8vh;
     }
 
-    p{
+    textContent{
         font-size: 2vh;
         text-align: justify;
         margin: 1vh;
     }
-    img{
-        width: 40%;
+    .imgContent{
+        width: 25vh;
         margin: 1vh;
     }
 }
