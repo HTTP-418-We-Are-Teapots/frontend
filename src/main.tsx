@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import App from './App.tsx';
-
 import Geoguesser from './games/geoguesser/Geoguesser.tsx';
 import PreventGeoguessr from './prevention/games/PreventGeoguessr.tsx';
 
