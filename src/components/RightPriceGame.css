@@ -1,0 +1,68 @@
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    margin-left: 10px;
+    font-size: 10px;
+    
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .tooltip-button {
+    border-radius: 50%;
+    border: 1px solid black;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+  }
+
+
+  .input {
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 45px;
+  }
+
+  .buttonValidation {
+    height: 45px;
+    margin-left: 10px;
+  }
+
+  .question-mark{
+    width: 8px;
+  }
+
+
+  .response-source {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.progress {
+  margin-top: 15px;
+}
+.unit{
+  margin-top: -10px;
+}
