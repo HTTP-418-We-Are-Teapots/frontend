@@ -21,7 +21,7 @@ const sectionsData = [
   return (
     <div className='container'>
         <Header />
-        <Prevent sections={sectionsData} />
+        <Prevent sections={sectionsData} destination={'/games/geoGuessr'} />
     </div>
 
   )

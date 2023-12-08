@@ -4,8 +4,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 import App from './App.tsx';
+
 import Geoguesser from './games/geoguesser/Geoguesser.tsx';
+
+import PreventGeoguessr from './prevention/games/PreventGeoguessr.tsx';
+
 import './index.css';
 
 const router = createBrowserRouter([
@@ -24,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/games/geoguessr",
     element: <Geoguesser />,
+  },
+  {
+    path: "/prevention/geoguessr",
+    element: <PreventGeoguessr />,
   },
   {
     path: "*",
