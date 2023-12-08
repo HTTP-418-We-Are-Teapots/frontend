@@ -6,11 +6,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20vh;
+    justify-content: space-around;
 
     h1 {
         padding: 0;
         margin: 0;
+    }
+
+    .sectionContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        max-height: calc(100vh - 300px);
+        max-width: 60%;
+        overflow-y: auto;
+        padding-right: 20px;
     }
 
     & > div {
