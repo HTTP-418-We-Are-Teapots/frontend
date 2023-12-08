@@ -1,0 +1,150 @@
+[{
+    
+    "question": "Quelle est l'empreinte carbone moyenne d'un français en 2018 ?",
+    "value": 9.2,
+    "unit": "t/habitant",
+    "sources": "https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-du-climat-france-europe-et-monde-edition-decembre-2022",
+    "isSolution": false,
+    "placeholder":"0.0"
+    
+},
+
+{
+    
+    "question": "Quelle est l'évolution des émissions de gaz à effets de serre en Europe entre 1990 et 2020 ?",
+    "value": -32,
+    "unit": "%",
+    "sources": "https://www.i4ce.org/wp-content/uploads/2022/12/Datalab-chiffres-cles-du-climat-2022-France-Europe-et-monde_au240123.pdf",
+    "isSolution": true,
+    "placeholder":"0"
+    
+},
+{
+    
+    "question": "Depuis 2000, combien de milliards de tonnes de glace ont perdus les glaciers en moyenne chaque année ?",
+    "value": 267,
+    "unit": "",
+    "sources": "https://www.i4ce.org/wp-content/uploads/2022/12/Datalab-chiffres-cles-du-climat-2022-France-Europe-et-monde_au240123.pdf",
+    "isSolution": false,
+    "placeholder":"0"
+    
+},
+{
+    
+    "question": "Quel est la hauteur des investissements en faveur du climat en 2021 ?",
+    "value": 83.8,
+    "unit": "Milliards d'euros",
+    "sources": "https://www.i4ce.org/wp-content/uploads/2022/12/Datalab-chiffres-cles-du-climat-2022-France-Europe-et-monde_au240123.pdf",
+    "isSolution": true,
+    "placeholder":"0.0"
+    
+},
+{
+    
+    "question": "En quelle année est sorti le premier rapport du GIEC ?",
+    "value": 1990,
+    "unit": "",
+    "sources": "https://www.i4ce.org/wp-content/uploads/2022/12/Datalab-chiffres-cles-du-climat-2022-France-Europe-et-monde_au240123.pdf",
+    "isSolution": true,
+    "placeholder":"0"
+    
+},
+{
+    
+    "question": "Si le pire scénario prédit par le GIEC avait lieu, de combien de degré s'élèverait la température ?",
+    "value": 4.4,
+    "unit": "°C",
+    "sources": "https://www.i4ce.org/wp-content/uploads/2022/12/Datalab-chiffres-cles-du-climat-2022-France-Europe-et-monde_au240123.pdf",
+    "isSolution": false,
+    "placeholder":"0.0"
+    
+},
+
+{
+    
+    "question": "En 2019, quelle est la part des déplacements dans l'empreinte carbone des Français ?",
+    "value": 32,
+    "unit": "%",
+    "sources": "https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-du-climat-france-europe-et-monde-edition-2023?rubrique=26&dossier=1263",
+    "isSolution": false,
+    "placeholder":"0"
+    
+},
+{
+    
+    "question": "Quelle est la part des émissions des véhicules particulier dans les émissions de gaz à effet de serre, dans le secteur des transports en France en 2020 ?",
+    "value": 52.3,
+    "unit": "%",
+    "sources": "https://www.i4ce.org/wp-content/uploads/2022/12/Datalab-chiffres-cles-du-climat-2022-France-Europe-et-monde_au240123.pdf",
+    "isSolution": false,
+    "placeholder":"0.0"
+    
+},
+
+{
+    
+    "question": "À combien est estimée la réduction de l'empreinte carbone par personne entre 1995 et 2021, en France ?",
+    "value": 20,
+    "unit": "%",
+    "sources": "https://www.i4ce.org/wp-content/uploads/2022/12/Datalab-chiffres-cles-du-climat-2022-France-Europe-et-monde_au240123.pdf",
+    "isSolution": true,
+    "placeholder":"0"
+    
+},
+
+{
+    
+    "question": "Quel pourcentage de français estime pouvoir assez facilement choisir des produits ayant moins d'impact sur l'environnement ?",
+    "value": 43,
+    "unit": "%",
+    "sources": "https://infos.ademe.fr/lettre-strategie-mars-2021/des-francais-prets-a-des-changements-en-faveur-de-lenvironnement/",
+    "isSolution": false,
+    "placeholder":"0"
+},
+
+{
+    
+    "question": "En moyenne, combien d'arbres sont plantés chaque seconde pour lutter contre la reforestation ?",
+    "value": 32,
+    "unit": "",
+    "sources": "https://www.planetoscope.com/forets/1817-plantation-d-arbres-dans-le-monde.html",
+    "isSolution": true,
+    "placeholder":"0"
+    
+},
+
+{
+    
+    "question": "Quelle est l'évolution des énergies renouvelables entre 1990 et 2020 en France ?",
+    "value": 84,
+    "unit": "%",
+    "sources": "https://www.statistiques.developpement-durable.gouv.fr/chiffres-cles-des-energies-renouvelables-edition-2021",
+    "isSolution": true,
+    "placeholder":"0"
+    
+},
+
+{
+    
+    "question": "Par combien le nombre de catastrophes a été multiplié en 50 ans ?",
+    "value": 5,
+    "unit": "",
+    "sources": "https://news.un.org/fr/story/2021/09/1102862",
+    "isSolution": false,
+    "placeholder":"0"
+    
+}, 
+
+{
+    
+    "question": "Combien de scénarios sont envisagées par l'ADEME afin d'atteintre les objectifs climats fixés par la COP21 ?",
+    "value": 4,
+    "unit": "",
+    "sources": "https://www.ademe.fr/en/futures-in-transition/scenarios/#technologies-vertes",
+    "isSolution": true,
+    "placeholder":"0"
+    
+}
+
+
+]
