@@ -1,0 +1,44 @@
+.header {
+    height: 8%;
+}
+
+.navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    gap: 10px;
+    padding: 8px;
+    padding-left: 20px;
+
+    list-style: none;
+
+    height: 100%;
+
+}
+
+.body {
+    position: relative;
+    background-image: url("../../assets/fond_acc_hiver.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 92%;
+}
+
+.title_container {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+}
+.play_container {
+    display: flex;
+    justify-content: center;
+    height: 20%;
+}
+
+.img_man {
+    position: absolute;
+    right: 10vw;
+    bottom: 10vh;
+}
