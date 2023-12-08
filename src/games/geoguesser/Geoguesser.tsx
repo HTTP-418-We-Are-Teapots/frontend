@@ -64,7 +64,7 @@ const Geoguesser: React.FC = () => {
   useEffect(() => {
     if (index === 0) {
       const startGeoGuessr = async () => {
-        const request = await fetch("/stat", {
+        const request = await fetch("https://api.we-are-teapots.fr/stat", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -90,7 +90,7 @@ const Geoguesser: React.FC = () => {
       })));
 
       const result = async () => {
-        const request = await fetch("/stat", {
+        const request = await fetch("https://api.we-are-teapots.fr/stat", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
