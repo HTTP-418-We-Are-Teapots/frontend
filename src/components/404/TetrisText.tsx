@@ -208,7 +208,7 @@ const Four = (props : GroupProps) => {
 
 
 function Tile({ random, color = new THREE.Color(), ...props } :{random: number, color: THREE.Color, props: GroupProps}) {
-    const ref = useRef<Group>()
+    const ref = useRef<any>()
     useFrame((state) => {
         const t = state.clock.getElapsedTime() + random * 10000
         if (ref.current !== undefined) {
@@ -245,7 +245,7 @@ function TetrisTiles({data}: { data: any}) {
     return (
         <group position={[0, 0, 0]}>
             {data.map((props: GroupProps, i: number) => (
-                <Tile key={i} {...props} />
+                <Tile random={0} color={new THREE.Color} props={props} key={i} {...props} />
             ))}
         </group>
     )

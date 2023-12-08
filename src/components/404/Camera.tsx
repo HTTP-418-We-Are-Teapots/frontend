@@ -1,10 +1,9 @@
 import {useRef} from 'react';
 import {PerspectiveCamera} from "@react-three/drei";
 import {useFrame} from "@react-three/fiber";
-import {Object3D} from "three";
 
 const Camera = () => {
-    const ref= useRef<Object3D>()
+    const ref= useRef<any>()
 
     useFrame((state) => {
         const t = state.clock.getElapsedTime()
