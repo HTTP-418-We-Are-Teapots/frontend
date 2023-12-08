@@ -1,8 +1,6 @@
-import Header from './components/landing/Header';
-
-import Prevent from './prevention/Prevent';
-
 import './App.css';
+import Header from "./components/landing/Header.tsx";
+import Prevent from './prevention/Prevent.tsx';
 
 function App() {
 
