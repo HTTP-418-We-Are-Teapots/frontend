@@ -6,8 +6,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import './index.css'
-import Header from './components/landing/Header.tsx';
+import Page404 from './components/404/Page404.tsx';
+import './index.css';
 import Home from './pages/Home.tsx';
 
 const router = createBrowserRouter([
@@ -29,14 +29,12 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <div>Not Found</div>,
+    element: <Page404 />,
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
-    <Header />
     <RouterProvider router={router} />
   </React.StrictMode>,
 )

@@ -1,7 +1,7 @@
-import './App.css'
+import './App.css';
+import Header from "./components/landing/Header.tsx";
 
-
-import './App.css'
+import './App.css';
 function App() {
 
 
