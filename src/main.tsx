@@ -2,19 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import App from './App.tsx';
+
 import Geoguesser from './games/geoguesser/Geoguesser.tsx';
 import PreventGeoguessr from './prevention/games/PreventGeoguessr.tsx';
+
+import RightPriceComponent from './components/RightPriceGame.tsx';
 
 import Page404 from './components/404/Page404.tsx';
 
 import './index.css';
-import Home from './pages/Home.tsx';
-import RightPriceComponent from './components/RightPriceGame.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <App />,
   },
   {
     path: "/statistics",
