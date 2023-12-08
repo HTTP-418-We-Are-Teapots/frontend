@@ -1,7 +1,7 @@
 .cards {
     margin: 20px;
     border-radius: 40px;
-    background: linear-gradient(#FFFFFF, #C1DAF16D, #D9D9D900);
+    background: linear-gradient(#ffffff, #c1daf16d, #d9d9d900);
     padding: 20px;
 
     display: grid;
@@ -9,10 +9,16 @@
     grid-gap: 40px 100px;
     padding: 50px 100px;
 
-
     .card {
         border-radius: 34px;
         background-color: white;
         height: 300px;
+
+        & > p {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            padding: 20px;
+        }
     }
 }
