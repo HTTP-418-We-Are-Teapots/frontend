@@ -22,7 +22,7 @@ const sectionsData = [
     <div className='container'>
         <Header />
         <Prevent sections={sectionsData} />
-        
+
     </div>
 
   )
