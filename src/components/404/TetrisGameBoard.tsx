@@ -4,10 +4,6 @@ import Camera from "./Camera.tsx";
 
 
 const TetrisGameBoard = () => {
-
-
-
-
     return (
         <Canvas>
             <Camera />
