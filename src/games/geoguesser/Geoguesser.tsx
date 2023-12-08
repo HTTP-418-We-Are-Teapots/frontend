@@ -1,9 +1,9 @@
-import { MapContainer, Marker, TileLayer } from 'react-leaflet';
-import styles from './geoguesser.module.css';
 import "leaflet/dist/leaflet.css";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import CustomMarker from './CustomMarker';
 import Line from './Line';
+import styles from './geoguesser.module.css';
 
 
 interface MapPoint {
@@ -53,6 +53,62 @@ const Geoguesser: React.FC = () => {
   const [index, setIndex] = useState(0);
   const [isValidate, setIsValidate] = useState(false);
   const [position, setPosition] = useState<number[]>([0, 0]);
+  const [data, setData] = useState<number[]>([]);
+
+  const [dataToStore, setDataToStore] = useState<{
+    questionId: number;
+    score: number;
+  }[]>([]);
+  const [dataResponse, setDataResponse] = useState<boolean>();
+
+  useEffect(() => {
+    if (index === 0) {
+      const startGeoGuessr = async () => {
+        const request = await fetch("/stat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            event: "geoGuessrStarted",
+          }),
+        });
+        const response = request.ok;
+        setDataResponse(response);
+      }
+      startGeoGuessr();
+      if (!dataResponse) console.error("Error while sending data to the backend");
+    }
+
+    if (index === mapPoints.length - 1) {
+      const averagePrecision = data.reduce((a, b) => a + b, 0) / data.length;
+      console.log(averagePrecision);
+
+      setDataToStore(data.map((score, index) => ({
+        questionId: index + 1,
+        score,
+      })));
+
+      const result = async () => {
+        const request = await fetch("/stat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            event: "geoGuessrFinished",
+            data: dataToStore
+          }),
+        });
+        const response = request.ok;
+        setDataResponse(response);
+      }
+      result();
+      if (!dataResponse) console.error("Error while sending data to the backend");
+      
+      return;
+    }
+  }, [index]);
 
 
   const handleValidate = () => {
@@ -73,8 +129,7 @@ const Geoguesser: React.FC = () => {
           >
             <TileLayer url="https://api.mapbox.com/styles/v1/dropy/clpvmvl0j01hl01pk2u0bb4eg/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZHJvcHkiLCJhIjoiY2xhOWN6eW51MGN0MjNubnZlcnp6cWNzZiJ9.YDH8e-3E2EzjBVfko__pjA" />
             <CustomMarker isValidate={isValidate} callback={setPosition} />
-            {isValidate && position != undefined && <Line latlong={[[position[0], position[1]],[mapPoints[index].lat, mapPoints[index].lng]]}/>}
-            {isValidate && <Marker position={[mapPoints[index].lat, mapPoints[index].lng]}></Marker> }
+            {isValidate && position != undefined && <Line latlong={[[position[0], position[1]],[mapPoints[index].lat, mapPoints[index].lng]]} isValidate={isValidate} setGlobalPrecision={setData} />}
           </MapContainer>
         </div>
     </div>
@@ -88,6 +143,9 @@ const Geoguesser: React.FC = () => {
   * - Indice écrit expliquant ce que l'image représente (accessibilité)
   * - Map Leaflet en bas de la page qui fait toute la largeur
   * - Agrandissement de la Map sur hover
+  * - Définir une limite à partir de laquelle le score est nul
+  * - Définir une échelle de distance menant à un pourcentage de précision
+  * - Stocker la valeur moyenne de précision du joueur pour l'envoyer au backend
   */
 
   /**
@@ -123,6 +181,23 @@ const Geoguesser: React.FC = () => {
   * https://www.adaptation-changement-climatique.gouv.fr/dossiers-thematiques/impacts/inondation
   *
   */
+
+  /**
+   * DATA MODEL
+   * 
+   * {
+   *  event: 'geoGuesserEvent',
+   *  data: {
+   *    [
+   *    {questionId: 1, score: 84},
+   *    {questionId: 2, score: 12},
+   *    {questionId: 3, score: 0},
+   *    {questionId: 4, score: 100},
+   *    {questionId: 5, score: 0},
+   *    ] 
+   *  }
+   * }
+   */
 
 }
 
