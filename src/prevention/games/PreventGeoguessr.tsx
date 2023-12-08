@@ -1,4 +1,4 @@
-import Prevent from '../prevent.tsx';
+import Prevent from '../Prevent.tsx';
 
 const sectionsData = [
     {
