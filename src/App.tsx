@@ -1,8 +1,8 @@
-import './App.css'
+import './App.css';
 import Header from "./components/landing/Header.tsx";
 
-import './App.css'
-import Prevent from './prevention/prevent'
+import './App.css';
+import Prevent from './prevention/Prevent.tsx';
 function App() {
 
 const sectionsData = [
@@ -22,7 +22,6 @@ const sectionsData = [
     <div className='container'>
         <Header />
         <Prevent sections={sectionsData} />
-
     </div>
 
   )
