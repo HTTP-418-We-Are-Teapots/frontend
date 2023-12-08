@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import App from './App.tsx';
+import Home from './pages/Home.tsx';
 
 import Geoguesser from './games/geoguesser/Geoguesser.tsx';
 import PreventGeoguessr from './prevention/games/PreventGeoguessr.tsx';
@@ -16,7 +16,7 @@ import './index.css';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
   },
   {
     path: "/statistics",

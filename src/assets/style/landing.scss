@@ -18,27 +18,72 @@
 }
 
 .body {
-    position: relative;
     background-image: url("../../assets/fond_acc_hiver.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 92%;
+    height: 100vh;
 }
 
 .title_container {
-    display: flex;
-    justify-content: center;
-    height: 80%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-35%);
 }
-.play_container {
+
+.buttonsContainer {
+    position: absolute;
     display: flex;
-    justify-content: center;
-    height: 20%;
+    justify-content: space-around;
+    padding-top: 40px;
+    width: 100vw;
+
+    div {
+        height: 200px;
+        width: 28vw;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        border-radius: 10px;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+
+        p {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 0;
+            font-size: 1.2rem;
+            text-align: center;
+            width: 100%;
+            padding: 5px 0;
+        }
+
+        &.banquise {
+            background-image: url("/home/banquise_fond.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &.planete {
+            background-image: url("/home/no_planet_b.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &.reflet {
+            background-image: url("/home/reflet.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
 }
 
 .img_man {
     position: absolute;
-    right: 10vw;
-    bottom: 10vh;
+    right: 30px;
+    bottom: 0px;
 }
