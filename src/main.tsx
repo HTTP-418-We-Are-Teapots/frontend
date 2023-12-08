@@ -1,5 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.tsx'
+import MemoryGame from './components/matcher/MemoryGame.tsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/games",
     element: <div>Games</div>,
+  },
+  {
+    path: "/game1",
+    element: <MemoryGame/>,
   },
   {
     path: "*",
