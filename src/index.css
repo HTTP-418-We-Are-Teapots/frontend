@@ -1,20 +1,40 @@
-<<<<<<< HEAD
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
-
-
-
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: url("/img/backgrounds/background_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  animation: background 40s ease-in-out infinite;
+}
+
+@keyframes background {
+  0% {
+    background-image: url("/img/backgrounds/background_1.jpg");
+  }
+  20% {
+    background-image: url("/img/backgrounds/background_2.jpg");
+  }
+  40% {
+    background-image: url("/img/backgrounds/background_3.jpg");
+  }
+  60% {
+    background-image: url("/img/backgrounds/background_4.jpg");
+  }
+  80% {
+    background-image: url("/img/backgrounds/background_5.jpg");
+  }
+  100% {
+    background-image: url("/img/backgrounds/background_1.jpg");
+  }
 }
 
 body {
   margin: 0;
   padding: 0;
 }
-=======
->>>>>>> ee17d7c0c3c85b718e698e48f39052c2e670b284

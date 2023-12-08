@@ -1,0 +1,18 @@
+.cards {
+    margin: 20px;
+    border-radius: 40px;
+    background: linear-gradient(#FFFFFF, #C1DAF16D, #D9D9D900);
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 100px;
+    padding: 50px 100px;
+
+
+    .card {
+        border-radius: 34px;
+        background-color: white;
+        height: 300px;
+    }
+}

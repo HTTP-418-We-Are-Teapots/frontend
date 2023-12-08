@@ -1,12 +1,10 @@
 .container {
-    background-image: url(../assets/fondHiver.jpg);
+    //background-image: url(../assets/fond_acc_hiver.jpg);
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20vh;
+    gap: 5vh;
 
     h1 {
         padding: 0;

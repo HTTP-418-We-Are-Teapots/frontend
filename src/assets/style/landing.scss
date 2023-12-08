@@ -2,18 +2,54 @@
     height: 8%;
 }
 
+nav {
+    background-color: white;
+    padding: 1px;
+    font-size: 1.1rem;
+    // Border bottom is an image :
+    border-image-source: url("/img/border.png");
+    border-image-slice: 9;
+    border-image-width: 0 0 9px 0;
+
+    ul {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        list-style: none;
+        gap: 30px;
+        padding-bottom: 10px;
+    }
+
+    &::after {
+        // A little star at the end of the nav :
+        content: "";
+        background-image: url("/img/little_star.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: 40px;
+        top: 55px;
+
+    }
+}
+
 .navbar {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 
-    gap: 10px;
-    padding: 8px;
     padding-left: 20px;
 
     list-style: none;
 
     height: 100%;
+
+    li {
+        padding: 10px;
+    }
 
 }
 

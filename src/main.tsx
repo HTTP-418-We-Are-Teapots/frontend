@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -8,6 +8,8 @@ import {
 import './index.css'
 import Header from './components/landing/Header.tsx';
 import Home from './pages/Home.tsx';
+import Prevention from './pages/Prevention.tsx';
+import Games from './pages/Games.tsx';
 
 const router = createBrowserRouter([
   {
@@ -15,12 +17,16 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
+    path: "/prevention",
+    element: <Prevention />,
+  },
+  {
     path: "/statistics",
     element: <div>Statistics</div>,
   },
   {
     path: "/games",
-    element: <div>Games</div>,
+    element: <Games />,
   },
   {
     path: "*",
@@ -30,7 +36,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
     <Header />
     <RouterProvider router={router} />
   </React.StrictMode>,

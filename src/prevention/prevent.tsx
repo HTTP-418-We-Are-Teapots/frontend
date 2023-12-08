@@ -18,6 +18,7 @@ const Prevent = ({ sections }: PreventProps) => {
             {sections.map((section, index) => (
                 <div key={index}>
                    <div>
+                    <img src={section.image} width="100" height="100" />
                     <h2>{section.title}</h2>
                     <p>{section.description}</p>
                     </div>
