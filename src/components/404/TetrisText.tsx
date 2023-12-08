@@ -1,11 +1,10 @@
-import {Cloud, Clouds, Instance, Instances, RoundedBox} from "@react-three/drei";
-import {COLORS} from "./types.ts";
-import {GroupProps, useFrame} from "@react-three/fiber";
-import {useRef} from "react";
-import {Group} from "three";
+import { Cloud, Clouds, RoundedBox } from "@react-three/drei";
+import { GroupProps, useFrame } from "@react-three/fiber";
+import { useRef } from "react";
 import * as THREE from "three";
-import {data} from "./store.ts";
 import Tetromino from "./Tetromino.tsx";
+import { data } from "./store.ts";
+import { COLORS } from "./types.ts";
 
 
 const Zero = (props : GroupProps) => {
