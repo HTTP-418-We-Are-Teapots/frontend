@@ -1,7 +1,7 @@
 import {Cloud, Clouds, Instance, Instances, RoundedBox} from "@react-three/drei";
 import {COLORS} from "./types.ts";
 import {GroupProps, useFrame} from "@react-three/fiber";
-import {useRef, useState} from "react";
+import {useRef} from "react";
 import {Group} from "three";
 import * as THREE from "three";
 import {data} from "./store.ts";
@@ -219,7 +219,6 @@ function Tile({ random, color = new THREE.Color(), ...props } :{random: number, 
         }
 
     })
-    const colorElt = COLORS[Math.floor(Math.random() * COLORS.length)]
     const randomIndex = Math.floor(Math.random() * 3)
     const randomColor = COLORS[Math.floor(Math.random() * COLORS.length)]
 
@@ -242,7 +241,7 @@ function Tile({ random, color = new THREE.Color(), ...props } :{random: number, 
 
 }
 
-function TetrisTiles({data, range}: { data: any, range: number }) {
+function TetrisTiles({data}: { data: any}) {
     return (
         <group position={[0, 0, 0]}>
             {data.map((props: GroupProps, i: number) => (
@@ -267,7 +266,7 @@ const TetrisText = () => {
                     <Cloud scale={[1, 1, 1]} position={[-12, 0, 0]} />
                 </Clouds>
             </group>
-            <TetrisTiles data={data} range={10}/>
+            <TetrisTiles data={data}/>
         </>
     )
 }

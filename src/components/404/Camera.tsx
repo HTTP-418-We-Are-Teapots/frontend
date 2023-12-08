@@ -1,11 +1,12 @@
 import {useRef} from 'react';
-import {CameraControls, PerspectiveCamera} from "@react-three/drei";
+import {PerspectiveCamera} from "@react-three/drei";
 import {useFrame} from "@react-three/fiber";
+import {Object3D} from "three";
 
 const Camera = () => {
-    const ref= useRef<CameraControls>()
+    const ref= useRef<Object3D>()
 
-    useFrame((state, delta, frame) => {
+    useFrame((state) => {
         const t = state.clock.getElapsedTime()
         if(ref.current){
             ref.current.rotation.set(Math.cos(t / 4) / 2, Math.sin(t / 4) / 2, Math.cos(t / 1.5) / 2)
