@@ -1,15 +1,23 @@
-import {Canvas} from "@react-three/fiber";
-import {OrbitControls, Sphere} from "@react-three/drei";
+import {Canvas, } from "@react-three/fiber";
+import {OrbitControls, PerspectiveCamera} from "@react-three/drei";
+import TetrisText from "./TetrisText.tsx";
+import Camera from "./Camera.tsx";
 
-const Tetris = () => {
+
+const TetrisGameBoard = () => {
+
+
+
+
     return (
         <Canvas>
-            <OrbitControls/>
-            <ambientLight/>
-            <pointLight position={[10, 10, 10]}/>
-            <Sphere />
+            <Camera />
+            <ambientLight intensity={1} />
+            <TetrisText />
+
+
         </Canvas>
     );
 };
 
-export default Tetris;
+export default TetrisGameBoard;
