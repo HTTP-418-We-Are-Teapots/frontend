@@ -106,7 +106,7 @@
     
     "question": "En moyenne, combien d'arbres sont plantés chaque seconde pour lutter contre la reforestation ?",
     "value": 32,
-    "unit": "%",
+    "unit": "",
     "sources": "https://www.planetoscope.com/forets/1817-plantation-d-arbres-dans-le-monde.html",
     "isSolution": true,
     "placeholder":"0"

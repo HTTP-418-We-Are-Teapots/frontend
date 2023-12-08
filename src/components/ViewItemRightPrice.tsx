@@ -1,5 +1,4 @@
-import React, { ReactEventHandler, useEffect, useState } from "react"
-import right_price from "../assets/right-price.json"
+import React, { useState } from "react"
 import './RightPriceGame.css'
 import questionMark from "../assets/pt_interrogation.png"
 
@@ -22,6 +21,11 @@ const ViewRightPriceComponent: React.FC<ViewRightPriceComponentProps> = ({ item,
 
     const displayResponse = () => {
         if (item) {
+            if (inputValue === "un nombre") {
+                // 🥚2🐇 <- Opaline
+                setResponse("Haha petit rigolo");
+                return;
+            }
             const userValue = parseFloat(inputValue)
             if (isNaN(userValue)) {
                 setResponse(falseValueResponse)
@@ -63,7 +67,7 @@ const ViewRightPriceComponent: React.FC<ViewRightPriceComponentProps> = ({ item,
 
 
     return (
-        <>
+            <div className="center">
             <h2 className="question">{item.question}</h2>
             {
                 item.unit !== "" ?
@@ -98,7 +102,7 @@ const ViewRightPriceComponent: React.FC<ViewRightPriceComponentProps> = ({ item,
 
             : null
             }
-        </>
+            </div>
     )
 
 }

@@ -1,8 +1,7 @@
 
-import React, { ReactEventHandler, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import right_price from "../assets/right-price.json"
 import './RightPriceGame.css'
-import questionMark from "../assets/pt_interrogation.png"
 import ViewRightPriceComponent from "./ViewItemRightPrice";
 
 
